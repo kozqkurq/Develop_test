@@ -40,3 +40,11 @@ def test_make_judge_no5():
 
     result = make_judge("E", [100, 100, 100, 100, 100, 100, 100, 100, 100, 100])
     assert result == 3
+
+def test_make_judge_no6():
+    """マトリックスNo6
+    成績がEの場合
+    """
+
+    result = make_judge("X", [100, 100, 100, 100, 100, 100, 100, 100, 100, 100])
+    assert result == 3
