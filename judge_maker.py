@@ -2,6 +2,10 @@ def make_judge(grade, points):
     result = None
     counter = 0
 
+    # 例外処理
+    if not grade in ["A", "B", "C", "D", "E"]:
+        raise Exception("graderにA～E以外の文字が入力されています")
+
     # 成績による判定
     if grade in ["A", "B", "C"]:
         result = 1

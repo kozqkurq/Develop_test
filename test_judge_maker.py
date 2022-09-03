@@ -43,8 +43,10 @@ def test_make_judge_no5():
 
 def test_make_judge_no6():
     """マトリックスNo6
-    成績がEの場合
+    gradeがA~E以外の文字であった場合
     """
-
-    result = make_judge("X", [100, 100, 100, 100, 100, 100, 100, 100, 100, 100])
-    assert result == 3
+    try:
+        result = make_judge("X", [100, 100, 100, 100, 100, 100, 100, 100, 100, 100])
+        assert False
+    except Exception as e:
+        assert e.args[0] == "graderにA～E以外の文字が入力されています"
